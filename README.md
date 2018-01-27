@@ -28,7 +28,7 @@ om het .tex bestand om te zetten naar PDF.
 
 ### Minimale opzet
 
-Een "Hello World!" Latex document `tex-bestanden\minimale-opzet.tex` ziet er als volgt uit.  
+Een "Hello World!" Latex document [minimale opzet](tex-bestanden/minimale-opzet.tex) ziet er als volgt uit.  
 
 	\documentclass[a4paper]{book}
 	
@@ -42,7 +42,7 @@ Tussen begin en end kan de **inhoud** van het boek geschreven worden.
 
 ### Titelpagina
 
-Gebruik `\title`, `\author`, `\date` en teslotte `\maketitle` om een titelpagina of kader aan te maken.  
+Gebruik `\title`, `\author`, `\date` en tenslotte `\maketitle` om een [titelpagina](tex-bestanden/titel-pagina.tex) aan te maken.  
 
 	\title{Latex voor beginners}
 	\author{Bas de Reus}
