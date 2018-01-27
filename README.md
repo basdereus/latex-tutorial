@@ -1,6 +1,6 @@
 # Latex voor beginners
 
-Latex is een typeset systeem voor het maken van o.a. documentatie in PDF formaat.  
+Latex is een hoge kwaliteit zet (typeset) systeem voor het opmaken van o.a. documentatie in PDF formaat.  
 In Latex voor beginners wordt stapsgewijs uitgelegd hoe je Latex kunt gebruiken om een boek te schrijven.    
 
 * Basis
@@ -30,14 +30,16 @@ om het .tex bestand om te zetten naar PDF.
 
 Een "Hello World!" Latex document `tex-bestanden\minimale-opzet.tex` ziet er als volgt uit.  
 
-	\documentclass{book}
+	\documentclass[a4paper]{book}
 	
 	\begin{document}
 	Hello World!
 	\end{document}
 
-Opdrachten worden vooraf gegaan door `\`. Opdracht `\documentclass{book}` is een minimale configuratie voor Latex.  
+Opdrachten worden vooraf gegaan door `\`. Opdracht `\documentclass[a4paper]{book}` is een minimale configuratie voor Latex.  
 Elk document begint met `\begin{document}` en eindigt met `\end{document}`.
 Tussen begin en end kan de **inhoud** van het boek geschreven worden.  
 
+
+	
 
