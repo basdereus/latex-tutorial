@@ -36,10 +36,18 @@ Een "Hello World!" Latex document `tex-bestanden\minimale-opzet.tex` ziet er als
 	Hello World!
 	\end{document}
 
-Opdrachten worden vooraf gegaan door `\`. Opdracht `\documentclass[a4paper]{book}` is een minimale configuratie voor Latex.  
+Opdrachten (Macros) worden vooraf gegaan door `\`. Opdracht `\documentclass[a4paper]{book}` is een minimale configuratie voor Latex.  
 Elk document begint met `\begin{document}` en eindigt met `\end{document}`.
 Tussen begin en end kan de **inhoud** van het boek geschreven worden.  
 
+### Titelpagina
 
-	
+Gebruik `\title`, `\author`, `\date` en teslotte `\maketitle` om een titelpagina of kader aan te maken.  
+
+	\title{Latex voor beginners}
+	\author{Bas de Reus}
+	\date{\today}
+	\maketitle
+
+
 
