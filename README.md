@@ -28,7 +28,7 @@ om het .tex bestand om te zetten naar PDF.
 
 ### Minimale opzet
 
-Een "Hello World!" Latex document [minimale opzet](tex-bestanden/minimale-opzet.tex) ziet er als volgt uit.  
+Een "Hello World!" Latex document [minimale opzet](tex-bestanden/minimale-opzet.tex) ziet er als volgt uit  
 
 	\documentclass[a4paper]{book}
 	
@@ -36,20 +36,24 @@ Een "Hello World!" Latex document [minimale opzet](tex-bestanden/minimale-opzet.
 	Hello World!
 	\end{document}
 
-Opdrachten (macros of commandos) worden vooraf gegaan door `\`. Opdracht `\documentclass[a4paper]{book}` is een minimale configuratie voor Latex.  
+Het document bestaat uit opdrachten (macros of commandos) en inhoud tekst.  
+Opdrachten worden vooraf gegaan door `\`. Opdracht 
+
+	\documentclass[a4paper]{book}
+
+b.v., is een minimale configuratie voor Latex.  
 Elk document begint met `\begin{document}` en eindigt met `\end{document}`.
 Tussen begin en end kan de **inhoud** van het boek geschreven worden.
-
 
 ### Opdrachten
 
 #### Packages
 
-Latex heeft een basis verzameling aan opdrachten. Andere opdrachten moeten worden geïmporteerd door gebruik te maken van
+Latex heeft een basis set aan opdrachten. Andere opdrachten moeten worden geïmporteerd door gebruik te maken van
 
 	\usepackage{package-naam}
 
-De basis verzameling opdrachten wordt bepaald door `documentclass` b.v. `book`.
+De basis set opdrachten wordt bepaald door `documentclass` b.v. `book`.
 
 #### Nieuwe opdrachten
 
@@ -57,7 +61,8 @@ Bij herhaald gebruik van samengestelde opdrachten kan gebruik gemaakt worden van
 
 	\newcommand{\opdracht-naam}{\samengetelde-opdracht}
 
-ook kunnen parameters worden geïntroduceerd zoals
+om nieuwe opdrachten te maken.  
+In de opdrachten kunnen ook parameters worden geïntroduceerd zoals
 
 	\newcommand[aantal-input-parameters]{\opdracht-naam}{\samengetelde-opdracht{#1}}
 	
@@ -65,11 +70,29 @@ bijvoorbeeld
 
 	\newcommand[1]{\imp}{\textbf{\textit{#1}}}
 	
-levert een nieuwe opdracht `\imp` op die tekst zowel vet als schuingedrukt weergeeft te gebruiken als
+Dit voorbeeld levert een nieuwe opdracht `\imp` op die tekst zowel vet als schuingedrukt weergeeft.  
+De nieuwe opdracht is dan als volgt te gebruiken
 
 	\imp{tekst}
 
-De nummering van parameters loopt op als `#1, #2, ...`
+De parameters worden aangeduid met `[1]` ingevuld op de plek van `{#1}`, `[2]` ... etc.
+
+### Een `.tex` opbouwen uit meerdere `.tex` bestanden
+
+Het `.tex` bestand kan de gehele inhoud van het boek bevatten.  
+Als het boek groter wordt is gangbaar dat de hoofdstukken worden verdeeld over meerdere `.tex` bestanden.  
+Invoegen van een tex bestand kan door gebruik te maken van
+
+	\input{tex-bestand}
+
+Het voorbeeld `boek.tex` bestand maakt gebruik van deze constructie
+
+	\input{boek-bestanden/basis.tex}
+
+In de generatie van het boek wordt `basis.tex` meegegenereerd naar het PDF document.  
+Op deze wijze kan je hoofdstukken ook hergebruiken.  
+
+N.B. de rest van de hoofstuk en de andere hoofdstukken uit voorbeeld `boek.tex` zijn op deze wijze geïmporteerd.  
 
 ### Tekst opmaak
 
@@ -85,7 +108,7 @@ onderstrepen kan met
 
 	\underline{tekst}
 
-Het `%` symbool wordt gebruikt voor commentaar. De rest van de regel wordt dan genegeerd bij het genereren van een PDF document.
+Het `%` symbool wordt gebruikt voor commentaar. De rest van de regel wordt dan genegeerd bij het genereren van het PDF document.
 
 	% Commentaar  
 
@@ -151,3 +174,5 @@ of 1 of meerdere paginas (aantal x) met
 
 	\blindtext[x]
 	
+
+
