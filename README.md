@@ -4,8 +4,7 @@ Latex is een hoge kwaliteit zet (typeset) systeem voor het opmaken van o.a. docu
 In Latex voor beginners wordt stapsgewijs uitgelegd hoe je Latex kunt gebruiken om een boek te schrijven.    
 
 * Basis
-* Hyperlinks
-* Referenties
+* Referenties, Hyperlinks
 * Figuren
 * Tabellen
 * Opsommingen
@@ -17,18 +16,18 @@ In Latex voor beginners wordt stapsgewijs uitgelegd hoe je Latex kunt gebruiken 
 
 ## Basis
 
-Voor het omzetten van .tex latex bestanden naar PDF wordt [Tex Live](https://www.tug.org/texlive/) gebruikt.  
+Voor het omzetten van `.tex` latex bestanden naar PDF wordt [Tex Live](https://www.tug.org/texlive/) gebruikt.  
 Eclipse TeXlipse plugin 2.0.1. wordt gebruikt om in Eclipse te kunnen werken met .tex files.    
 
 command-line kan gebruik worden gemaakt van 
 
 	$ pdflatex <boek.tex>
 	
-om het .tex bestand om te zetten naar PDF.  
+om het `.tex` bestand om te zetten naar PDF.  
 
 ### Minimale opzet
 
-Een "Hello World!" Latex document [minimale opzet](tex-bestanden/minimale-opzet.tex) ziet er als volgt uit  
+Een "Hello World!" Latex document met een [minimale opzet](tex-bestanden/minimale-opzet.tex) ziet er als volgt uit  
 
 	\documentclass[a4paper]{book}
 	
@@ -174,5 +173,40 @@ of 1 of meerdere paginas (aantal x) met
 
 	\blindtext[x]
 	
+## Hyperlinks
+
+Om hyperlinks te ondersteunen kan package `hyperref` gebruikt worden
+
+	\usepackage[colorlinks=true, breaklinks]{hyperref}
+
+Optie `colorlinks=true` toont links zonder 'box' om de links heen.  
+`breaklines` kapt links met een lange naam netje af.  
+
+### Hoofdstuk hyperlink
+
+Hyperlinks naar een Hoofdstuk kunnen gemaakt worden door
+
+	\chapter{Hyperlinks}
+	\label{label-naam}
+	
+gebruik te maken van opdracht `\label` als locatie waar naar toe verwezen kan worden.  
+
+	\ref{label-name}
+	
+verwijst dan naar het nummer van het hoofdstuk b.v. `2`.  
+Door gebruik te maken van  
+ 
+	\autoref{label-naam}
+
+wordt de verwijzing naar `Chapter 2`. N.B. Nederlands wordt niet standaard ondersteund.  
+Met behulp van
+
+	\addto\extrasdutch{  
+		\def\chapterautorefname{Hoofdstuk}  
+	}
+
+is het mogelijk de verwijzing de juiste vertaling naar `Hoofdstuk 2`. 
+Op de [hyperref documentatie](https://ctan.org/pkg/hyperref) pagina staat meer uitleg over andere opties van referenties.
+
 
 
