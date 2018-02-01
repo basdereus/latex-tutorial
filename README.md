@@ -206,7 +206,44 @@ Met behulp van
 	}
 
 is het mogelijk de verwijzing de juiste vertaling naar `Hoofdstuk 2`. 
-Op de [hyperref documentatie](https://ctan.org/pkg/hyperref) pagina staat meer uitleg over andere opties van referenties.
+Op de [hyperref documentatie](https://ctan.org/pkg/hyperref) pagina staat meer uitleg over andere referentie opties.
 
+Navigatie door de PDF heen aan de hand van geklikte links kan met ALT-LEFT en ALT-RIGHT.
 
+### Sectie hyperlink
 
+Dezelfde regels gelden voor sectie, waarbij de `\label` dan onder de sectie komt te staan.  
+
+	\section{Hyperlinks}
+	\label{sectie-label-naam}
+	
+Door `\def\sectionautorefname{Sectie}` toe te voegen aan `\addto\extrasdutch` worden secties ook vertaald naar b.v. `Sectie 2`.  
+
+### Aangepaste hyperlink
+
+Een aangepaste hyperlin wordt verkregen door b.v.  
+
+	\hyperref[label-naam]{aangepaste-versie-naam \ref*{label-naam}}
+
+met b.v. tot gevolg  
+
+	aangepaste-versie-naam 2
+	
+waarbij `2` bijvoorbeeld een hoofdstuk nummer is.
+
+### Internet links
+
+Hyperlinks naar internet lokaties worden verkregen met
+
+	\url{https://ctan.org}
+
+of
+
+	\href{https://ctan.org}{CTAN website}  
+	
+## Referenties
+
+Een verwijzing naar een `\label{label-naam}` zonder hyperlink wordt verkregen met  
+
+	\ref*{label-naam}
+  
