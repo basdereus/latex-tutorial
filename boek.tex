@@ -4,6 +4,17 @@
 \usepackage[dutch]{babel}
 \usepackage[top=2.5cm, left=2.5cm, bottom=2.5cm, right=2.5cm]{geometry}
 \usepackage[colorlinks=true, breaklinks]{hyperref}
+\usepackage[round,authoryear]{natbib}
+
+\usepackage{xcolor}
+\definecolor{c1}{rgb}{0,0,1} % blue
+\definecolor{c2}{rgb}{0,0.3,0.9} % light blue
+\definecolor{c3}{rgb}{0.3,0,0.9} % red blue
+\hypersetup{
+    linkcolor={c1}, % internal links
+    citecolor={c2}, % citations
+    urlcolor={c3} % external links/urls
+}
 
 \addto\extrasdutch{  
 	\def\chapterautorefname{Hoofdstuk}  
@@ -20,5 +31,8 @@
 
 \input{boek-bestanden/basis.tex}
 \input{boek-bestanden/hyperlinks.tex}
+
+\bibliographystyle{abbrvnat}
+\bibliography{boek-bestanden/library}
 
 \end{document}

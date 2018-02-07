@@ -247,3 +247,62 @@ Een verwijzing naar een `\label{label-naam}` zonder hyperlink wordt verkregen me
 
 	\ref*{label-naam}
   
+## Literatuur referenties
+
+Literatuur verwijzingen kunnen worden opgezet met Bibtex.  
+Inhoudelijk worden deze referenties in een extern bestand bewaard b.v. `library.bib`  
+De koppeling vindt plaats door  
+
+	\bibliographystyle{abbrvnat}
+	\bibliography{tex-bestanden/library}
+
+Om `abbrvnat` te kunnen gebruiken is package `natbib` nodig  
+
+	\usepackage[round,authoryear]{natbib}
+
+Daarmee is ook de `\citep` beschikbaar.  
+
+Verwijzingen worden gedaan op `sleutel` zoals
+
+	\cite{Martin2018}
+	
+zichtbaar als `Martin (2018)` of
+
+	\citep{Martin2018}
+
+zichtbaar als `(Martin, 2018)`
+	
+waarbij b.v.  
+
+	@book{Martin2018,
+		abstract = {Abstract text},
+		author = {Martin, Robert C.},
+		isbn = {97801344944166},
+		pages = {404},
+		publisher = {Pearson Education},
+		title = {{Clean Architecture}},
+		url = {https://url},
+		year = {2018}
+	}
+
+Om de verwijzingen op de juiste manier in het PDF document te krijgen moet de volgens reeks command-line opdrachten gebruikt worden  
+
+	pdflatex boek
+	bibtex boek
+	pdflatex boek
+	pdflatex boek
+
+## Kleurinstellingen referenties
+
+De referenties hebben per default nogal felle kleuren groen, rood en blauw.  
+Met package `xcolor` kunnen de kleuren gewijzigd worden  
+
+	\usepackage{xcolor}
+	\definecolor{c1}{rgb}{0,0,1} % blauw
+	\definecolor{c2}{rgb}{0,0.3,0.9} % licht blauw
+	\definecolor{c3}{rgb}{0.3,0,0.9} % paars
+	\hypersetup{
+	    linkcolor={c1}, % interne referenties
+	    citecolor={c2}, % literatuur referenties
+	    urlcolor={c3} % externe referenties
+	}
