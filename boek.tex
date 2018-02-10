@@ -5,6 +5,7 @@
 \usepackage[top=2.5cm, left=2.5cm, bottom=2.5cm, right=2.5cm]{geometry}
 \usepackage[colorlinks=true, breaklinks]{hyperref}
 \usepackage[round,authoryear]{natbib}
+\usepackage{graphicx}
 
 \usepackage{xcolor}
 \definecolor{c1}{rgb}{0,0,1} % blue
@@ -19,9 +20,12 @@
 \addto\extrasdutch{  
 	\def\chapterautorefname{Hoofdstuk}  
 	\def\sectionautorefname{Sectie}  
+	\def\figureautorefname{Figuur}  
 }
 
 \begin{document}
+
+\selectlanguage{dutch}
 
 \title{Latex voor beginners}
 \author{Bas de Reus}
@@ -31,8 +35,11 @@
 
 \input{boek-bestanden/basis.tex}
 \input{boek-bestanden/hyperlinks.tex}
+\input{boek-bestanden/afbeeldingen}
 
 \bibliographystyle{abbrvnat}
 \bibliography{boek-bestanden/library}
+
+\listoffigures
 
 \end{document}

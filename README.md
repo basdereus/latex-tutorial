@@ -5,7 +5,7 @@ In Latex voor beginners wordt stapsgewijs uitgelegd hoe je Latex kunt gebruiken 
 
 * Basis
 * Referenties, Hyperlinks
-* Figuren
+* Afbeeldingen
 * Tabellen
 * Opsommingen
 * Wiskunde
@@ -247,7 +247,7 @@ Een verwijzing naar een `\label{label-naam}` zonder hyperlink wordt verkregen me
 
 	\ref*{label-naam}
   
-## Literatuur referenties
+### Literatuur referenties
 
 Literatuur verwijzingen kunnen worden opgezet met Bibtex.  
 Inhoudelijk worden deze referenties in een extern bestand bewaard b.v. `library.bib`  
@@ -292,7 +292,7 @@ Om de verwijzingen op de juiste manier in het PDF document te krijgen moet de vo
 	pdflatex boek
 	pdflatex boek
 
-## Kleurinstellingen referenties
+### Kleurinstellingen referenties
 
 De referenties hebben per default nogal felle kleuren groen, rood en blauw.  
 Met package `xcolor` kunnen de kleuren gewijzigd worden  
@@ -306,3 +306,45 @@ Met package `xcolor` kunnen de kleuren gewijzigd worden
 	    citecolor={c2}, % literatuur referenties
 	    urlcolor={c3} % externe referenties
 	}
+
+## Afbeeldingen
+
+Voor afbeeldingen wordt package `graphicx` gebruikt
+
+	\usepackage{graphicx}  
+	
+Met opdracht `\includegraphics` kunnen afbeeldingen van het type PNG of JPEG in het PDF document worden geïmporteerd.  
+Afbeelding `aarde.png` wordt b.v. neergezet met  
+
+	\includegraphics[width=0.3\textwidth]{boek-bestanden/aarde}
+
+Ook kan er een lijst met figuren worden toegevoegd met opdracht
+
+	\listoffigures
+
+Daarvoor is wel nodig dat de afbeelding is opgenomen tussen `\begin{figure}` en `\end{figure}`
+
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.3\textwidth]{boek-bestanden/aarde}
+		\caption{aarde}		
+	\end{figure}
+
+en een bijschrift zoals  
+
+	\caption{Aarde}
+
+Opdracht `\centering` zorgt ervoor dat de afbeelding gecentreerd op de pagina komt te staan.  
+Optie `[h!]` zorgt ervoor dat de afbeelding ter plekke wordt ingevoegd.  
+Optie [width=0.3\textwidth] maakt de breedte van de afbeelding 0.3 maal de breedte van de text.  
+
+Afbeelding referenties worden niet per default vertaald.  Vertaling kan worden toegevoegd door  
+
+	\def\figureautorefname{Figuur}  
+
+aan
+
+	\addto\extrasdutch{    
+	
+toe te voegen.  
+
