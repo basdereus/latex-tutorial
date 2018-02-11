@@ -173,7 +173,51 @@ of 1 of meerdere paginas (aantal x) met
 
 ## Opsommingen
 
+Opsommingen kunnen zowel `genummerd` als `ongenummerd` zijn  
+
+### Genummererde opsommingen
+
+Opsommingen zoals  
+
+ 1. Eerste item  
+ 2. Tweede item  
+
+worden in Latex met package `\usepackage{enumerate}` geïntroduceerd  
+
+	\begin{enumerate}
+	  \item Eerste item
+	  \item Tweede item
+	\end{enumerate}
+
+met
+
+	\begin{enumerate}[a)]
 	
+loopt de 'nummering' als volgt  
+
+ a) Eerste item  
+ b) Tweede item  
+
+Met
+
+	\begin{enumerate}[~~~1)]
+
+wordt de nummering voorafgegaan met 3 spaties en eindigt deze op een sluitend haakje.  
+
+### Ongenummererde opsommingen
+
+Met behulp van `itemize` kunnen ongenummerde (stippen) lijsten gemaakt worden
+
+ * Eerste item
+ * Tweede item
+
+worden in Latex als volgt genoteerd  
+ 
+	\begin{itemize}
+	  \item Eerste item
+	  \item Tweede item
+	\end{itemize}
+
 ## Hyperlinks
 
 Om hyperlinks te ondersteunen kan package `hyperref` gebruikt worden
