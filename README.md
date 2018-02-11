@@ -4,14 +4,12 @@ Latex is een hoge kwaliteit zet (typeset) systeem voor het opmaken van o.a. docu
 In Latex voor beginners wordt stapsgewijs uitgelegd hoe je Latex kunt gebruiken om een boek te schrijven.    
 
 * Basis
+* Opsommingen
 * Referenties, Hyperlinks
 * Afbeeldingen
 * Tabellen
-* Opsommingen
-* Wiskunde
 * Appendix
 * Footnotes
-* Todos
 * Index
 
 ## Basis
@@ -172,6 +170,9 @@ en vervolgens waar nodig
 of 1 of meerdere paginas (aantal x) met
 
 	\blindtext[x]
+
+## Opsommingen
+
 	
 ## Hyperlinks
 
