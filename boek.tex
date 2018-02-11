@@ -21,6 +21,7 @@
 	\def\chapterautorefname{Hoofdstuk}  
 	\def\sectionautorefname{Sectie}  
 	\def\figureautorefname{Figuur}  
+	\def\tableautorefname{Tabel}  
 }
 
 \begin{document}
@@ -35,11 +36,13 @@
 
 \input{boek-bestanden/basis.tex}
 \input{boek-bestanden/hyperlinks.tex}
-\input{boek-bestanden/afbeeldingen}
+\input{boek-bestanden/afbeeldingen.tex}
+\input{boek-bestanden/tabellen.tex}
 
 \bibliographystyle{abbrvnat}
 \bibliography{boek-bestanden/library}
 
 \listoffigures
+\listoftables
 
 \end{document}

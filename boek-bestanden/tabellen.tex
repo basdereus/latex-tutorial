@@ -1,0 +1,43 @@
+\chapter{Tabellen}
+\label{tabellen}
+
+\section{Tabel}
+
+\blindtext
+
+\begin{table}[h!]
+	\begin{tabular}{lr}
+	cel (1,1)
+	& cel (1,2)
+	\\
+	cel (2,1)
+	& cel (2,2)
+	\end{tabular}
+\end{table}
+
+\blindtext
+
+\begin{table}[h!]
+	\label{tabel}
+	\centering
+	\begin{tabular}{|l|c|l|}
+	\hline
+	
+	& kop 1
+	& kop 2
+	\\ \hline
+	rij 1
+	& cel (1,1)
+	& cel (1,2)
+	\\
+	rij 2
+	& cel (2,1)
+	& cel (2,2)
+	\\ \hline
+	\end{tabular}
+	\caption{Tabel Verwijzing}
+\end{table}
+
+\blindtext
+
+\autoref{tabel}

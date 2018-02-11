@@ -348,3 +348,66 @@ aan
 	
 toe te voegen.  
 
+## Tabellen
+
+Tabellen worden vergelijkbaar met afbeeldingen ingevoegd. 
+De volgende representatie van een tabel defineert twee kolommen en twee rijen;  
+
+	\begin{table}[h!]
+	\begin{tabular}{lr}
+	cel (1,1)
+	& cel (1,2)
+	\\
+	cel (2,1)
+	& cel (2,2)
+	\end{tabular}
+	\end{table}
+
+Optie `[h!]` zorgt ervoor dat de tabel ter plekke wordt ingevoegd.  
+Standaard wordt de tabel links uitgelijnd.  
+`\begin{tabular}{lr}` definieert een tabel met twee kolommen waaran de tekst in de eerste kolom links uitgelijnd wordt en de tekst in de tweede kolom rechts.  
+Kolommen worden gescheiden met `&`.  Rijen worden gescheiden met `\\`.  
+
+Toevoegen van horizontale omlijning in de tabel kan met `\hline\`.  
+Vertikale omlijning wordt in na `{tabular}` gedefinieerd in de vorm van een pipe `|`.  
+
+	\begin{table}[h!]
+	\label{tabel}
+	\centering
+	\begin{tabular}{|l|c|l|}
+	\hline
+	
+	& kop 1
+	& kop 2
+	\\ \hline
+	rij 1
+	& cel (1,1)
+	& cel (1,2)
+	\\
+	rij 2
+	& cel (2,1)
+	& cel (2,2)
+	\\ \hline
+	\end{tabular}
+	\caption{Tabel Verwijzing}
+	\end{table}
+	
+Met `\label{tabel}` kan naar de tabel verwezen worden met `\autoref{tabel}`.  
+De vertaling is niet standaard geregeld en kan worden toegevoegd door  
+
+	\def\tableautorefname{Tabel}  
+
+aan 
+
+	\addto\extrasdutch
+
+toe te voegen.  
+
+`\centering` plaatst de tabel in het midden op de pagina.  
+`\caption{Tabel Verwijzing}` is het onderschrift van de tabel.  
+
+Met opdracht `\listoftables` wordt een lijst met verwijzingen naar tabellen aan de PDF toegevoegd.  
+
+
+
+	
