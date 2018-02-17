@@ -5,11 +5,10 @@ In Latex voor beginners wordt stapsgewijs uitgelegd hoe je Latex kunt gebruiken 
 
 * Basis
 * Opsommingen
-* Referenties, Hyperlinks
+* Referenties, Voetnoten, Hyperlinks
 * Afbeeldingen
 * Tabellen
 * Appendix
-* Footnotes
 * Index
 
 ## Basis
@@ -275,6 +274,10 @@ met b.v. tot gevolg
 	aangepaste-versie-naam 2
 	
 waarbij `2` bijvoorbeeld een hoofdstuk nummer is.
+
+### Voetnoten
+
+Met `\footnote{voetnoot-tekst}` wordt een voetnoot geplaatst onderaan de pagina.  
 
 ### Internet links
 
