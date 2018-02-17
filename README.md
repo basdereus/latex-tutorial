@@ -182,14 +182,14 @@ Opsommingen zoals
  1. Eerste item  
  2. Tweede item  
 
-worden in Latex met package `\usepackage{enumerate}` geïntroduceerd  
+worden in Latex met package `\usepackage{enumerate}` geïntroduceerd als   
 
 	\begin{enumerate}
 	  \item Eerste item
 	  \item Tweede item
 	\end{enumerate}
 
-met
+Met
 
 	\begin{enumerate}[a)]
 	
@@ -453,6 +453,38 @@ toe te voegen.
 
 Met opdracht `\listoftables` wordt een lijst met verwijzingen naar tabellen aan de PDF toegevoegd.  
 
+## Bijlagen
+
+In [appendix](boek-bestanden/appendix.tex) staat het gebruik van bijlagen uitgwerkt.  
+Tussen `\begin{appendix}` en `\end{appendix}` kunnen bijlagen worden ingevoegd.  
+Elk `\chapter{appendix-titel}` zorgt voor een nieuwe bijlage met oplopende letters `A, B, ...`  
+Paragrafen `\section{sectie-titel}` worden genummerd voorafgegaan door de letter van de desbetreffende bijlage.  
+
+Als voorbeeld zorgt
+
+	\begin{appendix}
+	\chapter{Eerste uitleg}
+	\label{bijlage1}
+	\section{Eerste onderdeel}
+	\end{appendix}
+	
+voor een bijlage volgens
+ 
+	Bijlage A
+	Eerste uitleg
+	
+	A.1 Eerste onderdeel
+	
+Met `\label{bijlage1}` kan naar de bijlage verwezen worden met `\autoref{bijlage1}`.  
+De vertaling is niet standaard geregeld en kan worden toegevoegd door  
+
+	\def\appendixautorefname{Bijlage}  
+
+aan 
+
+	\addto\extrasdutch
+
+toe te voegen.  
 
 
 	
