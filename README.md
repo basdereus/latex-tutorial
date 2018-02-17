@@ -5,7 +5,7 @@ In Latex voor beginners wordt stapsgewijs uitgelegd hoe je Latex kunt gebruiken 
 
 * Basis
 * Opsommingen
-* Referenties, Voetnoten, Hyperlinks
+* Verwijzingen
 * Afbeeldingen
 * Tabellen
 * Appendix
@@ -304,6 +304,8 @@ De koppeling vindt plaats door
 	\bibliographystyle{abbrvnat}
 	\bibliography{tex-bestanden/library}
 
+`\usepackage[nottoc]{tocbibind}` zorgt ervoor dat `\bibliography` als apart hoofdstuk wordt opgenomen.  
+
 Om `abbrvnat` te kunnen gebruiken is package `natbib` nodig  
 
 	\usepackage[round,authoryear]{natbib}
@@ -369,6 +371,8 @@ Afbeelding `aarde.png` wordt b.v. neergezet met
 Ook kan er een lijst met figuren worden toegevoegd met opdracht
 
 	\listoffigures
+
+`\usepackage[nottoc]{tocbibind}` zorgt ervoor dat `\listoffigures` als apart hoofdstuk wordt opgenomen.  
 
 Daarvoor is wel nodig dat de afbeelding is opgenomen tussen `\begin{figure}` en `\end{figure}`
 
@@ -456,6 +460,8 @@ toe te voegen.
 
 Met opdracht `\listoftables` wordt een lijst met verwijzingen naar tabellen aan de PDF toegevoegd.  
 
+`\usepackage[nottoc]{tocbibind}` zorgt ervoor dat `\listoftables` als apart hoofdstuk wordt opgenomen.  
+
 ## Bijlagen
 
 In [appendix](boek-bestanden/appendix.tex) staat het gebruik van bijlagen uitgwerkt.  
@@ -489,5 +495,31 @@ aan
 
 toe te voegen.  
 
+## Index
 
+Met package `makeidx` gevolgd door opdracht `\makeindex` kan gebruik worden gemaakt van het indexeren van woorden.  
+
+	\usepackage{makeidx}
+	\makeindex
+
+Woorden die in de index terecht moet komen worden neergezet met
+
+	\index{Eerste woord}
+
+Op de plek van
+
+	\printindex
+
+wordt de index in de PDF ingevoegd.  
+
+`\usepackage[nottoc]{tocbibind}` zorgt ervoor dat de index als apart hoofdstuk wordt opgenomen.  
+
+Om de index in de PDF te krijgen is nodig dat command-line 
+
+	pdflatex boek
+	makeindex boek
+	pdflatex boek
+	pdflatex boek
+
+uit te voeren. Waar `boek` het `.tex` document is.
 	

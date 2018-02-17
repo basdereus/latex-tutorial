@@ -1,4 +1,4 @@
-\documentclass[a4paper]{book}
+\documentclass[a4paper, oneside]{book}
 
 \usepackage{blindtext}
 \usepackage[dutch]{babel}
@@ -7,6 +7,9 @@
 \usepackage[round,authoryear]{natbib}
 \usepackage{graphicx}
 \usepackage{enumerate}
+\usepackage{tocbibind}
+\usepackage{makeidx}
+\makeindex
 
 \usepackage{xcolor}
 \definecolor{c1}{rgb}{0,0,1} % blue
@@ -41,7 +44,7 @@
 \input{boek-bestanden/hyperlinks.tex}
 \input{boek-bestanden/afbeeldingen.tex}
 \input{boek-bestanden/tabellen.tex}
-
+\input{boek-bestanden/index.tex}
 \input{boek-bestanden/appendix.tex}
 
 \bibliographystyle{abbrvnat}
@@ -49,5 +52,6 @@
 
 \listoffigures
 \listoftables
+\printindex
 
 \end{document}
