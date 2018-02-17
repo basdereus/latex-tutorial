@@ -35,11 +35,12 @@ Een "Hello World!" Latex document met een [minimale opzet](tex-bestanden/minimal
 Het document bestaat uit opdrachten (macros of commandos) en inhoud tekst.  
 Opdrachten worden vooraf gegaan door `\`. Opdracht 
 
-	\documentclass[a4paper]{book}
+	\documentclass[a4paper, oneside]{book}
 
 b.v., is een minimale configuratie voor Latex.  
 Elk document begint met `\begin{document}` en eindigt met `\end{document}`.
 Tussen begin en end kan de **inhoud** van het boek geschreven worden.
+Standaard is een `book` tweezijdig. `oneside` zorgt ervoor dat er geen lege pagina's in de PDF terecht komen.  
 
 ### Opdrachten
 
@@ -522,4 +523,16 @@ Om de index in de PDF te krijgen is nodig dat command-line
 	pdflatex boek
 
 uit te voeren. Waar `boek` het `.tex` document is.
+
+## Met dank aan
+
+[Latex - Basic elements for writing a book/thesis](https://www.youtube.com/watch?v=Qjp-a2uZWZc) van Mauricio Lobos.
+[Stackoverflow](https://stackoverflow.com)
+[Tex](https://tex.stackexchange.com)
+[ShareLatex](https://nl.sharelatex.com)
+[Afbeelding aarde](http://www.clipartlord.com/wp-content/uploads/2014/08/earth22.png)
+[TexLive](https://www.tug.org/texlive/)
+[CTAN](https://ctan.org/)
+
+
 	
