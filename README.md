@@ -10,6 +10,7 @@ In Latex voor beginners wordt stapsgewijs uitgelegd hoe je Latex kunt gebruiken 
 * Tabellen
 * Appendix
 * Index
+* Met dank aan
 
 ## Basis
 
@@ -526,13 +527,10 @@ uit te voeren. Waar `boek` het `.tex` document is.
 
 ## Met dank aan
 
-[Latex - Basic elements for writing a book/thesis](https://www.youtube.com/watch?v=Qjp-a2uZWZc) van Mauricio Lobos.
-[Stackoverflow](https://stackoverflow.com)
-[Tex](https://tex.stackexchange.com)
-[ShareLatex](https://nl.sharelatex.com)
-[Afbeelding aarde](http://www.clipartlord.com/wp-content/uploads/2014/08/earth22.png)
-[TexLive](https://www.tug.org/texlive/)
-[CTAN](https://ctan.org/)
-
-
-	
+[Latex - Basic elements for writing a book/thesis](https://www.youtube.com/watch?v=Qjp-a2uZWZc) van Mauricio Lobos.  
+[Stackoverflow](https://stackoverflow.com)  
+[Tex](https://tex.stackexchange.com)  
+[ShareLatex](https://nl.sharelatex.com)   
+[Afbeelding aarde](http://www.clipartlord.com/wp-content/uploads/2014/08/earth22.png)    
+[TexLive](https://www.tug.org/texlive/)    
+[CTAN](https://ctan.org/)  
